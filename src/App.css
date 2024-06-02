@@ -49,11 +49,23 @@
 }
 .glassImage {
   position: absolute;
-  width: 84px;
+  width: 169px;
   height: 200px;
   background-repeat: no-repeat;
   background-size: contain;
-  top: 47px;
-  right: 277px;
+  top: 96px;
+  right: 231px;
   z-index: 1;
+}
+.overlay {
+  position: absolute;
+  width: 303px;
+  height: 110px;
+  bottom: -1px;
+  left: 163px;
+  color: white;
+  background-color: rgba(255, 68, 0, 0.5);
+  padding: 5px;
+  font-size: 15px;
+  text-align: left;
 }

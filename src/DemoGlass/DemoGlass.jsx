@@ -6,18 +6,23 @@ import Model from './Model'
 
 export default class DemoGlass extends Component {
   state = {
-    bgImage: ""
+    bgImage: "",
+    name: "",
+    desc: "",
   }
 
-  handleChangeGlass = (newImage) => {
-    this.setState({
-      bgImage: newImage,
-    })
+  handleChangeGlass = (newImage,newName,newDesc,id) => {
+    this.setState(prevState => ({
+      bgImage: prevState.id === id ? "" : newImage,
+      name: prevState.id === id ? "" : newName,
+      desc: prevState.id === id ? "" : newDesc,
+      id: prevState.id === id ? null : id,    
+    }))
   }
 
   renderGlass = () => {
-    return glassArr.map(({ index, hinhAnh }) => {
-      return <Glass handleClick={() => this.handleChangeGlass(hinhAnh)} key={index} img={hinhAnh} />
+    return glassArr.map(({ index, hinhAnh,name,desc}) => {
+      return <Glass handleClick={() => this.handleChangeGlass(hinhAnh,name,desc)} key={index} img={hinhAnh} />
     })
   }
 
@@ -25,7 +30,7 @@ export default class DemoGlass extends Component {
     return (
       <div className='container-fluid project'>
         <Header />
-        <Model bgImage={this.state.bgImage} />
+        <Model bgImage={this.state.bgImage} name={this.state.name} desc={this.state.desc}/>
         <div className='row p-5'>{this.renderGlass()}</div>
       </div>
     )
