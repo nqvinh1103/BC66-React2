@@ -44,16 +44,16 @@
 .contain {
   margin: auto;
   position: relative;
-  width: 1000px;
+  /* width: 1000px; */
   height: auto;
 }
 .glassImage {
   position: absolute;
-  width: 129px;
+  width: 84px;
   height: 200px;
   background-repeat: no-repeat;
   background-size: contain;
-  top: 77px;
-  right: 434px;
+  top: 47px;
+  right: 277px;
   z-index: 1;
 }
