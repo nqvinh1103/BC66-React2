@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+.project {
+  background-image: url(https://intoroigiare.vn/wp-content/uploads/2023/11/background-mau-trang.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.contain {
+  margin: auto;
+  position: relative;
+  width: 1000px;
+  height: auto;
+}
+.glassImage {
+  position: absolute;
+  width: 129px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: 77px;
+  right: 434px;
+  z-index: 1;
+}
